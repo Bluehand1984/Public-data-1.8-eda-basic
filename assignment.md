@@ -23,6 +23,8 @@ Answer:
 
 ```python
 
+df.loc[:, df.gt(threshold).any(axis=1)]
+
 ```
 
 ### Question 2
@@ -38,6 +40,8 @@ df = pd.DataFrame({'A': [2, 1, 2], 'B': [2, 3, 1], 'C': [1, 2, 3]})
 Answer:
 
 ```python
+
+df_sorted = df.sort_values(by=['A', 'B'])
 
 ```
 
@@ -56,6 +60,9 @@ Answer:
 
 ```python
 
+df_concat = pd.concat([df1, df2], axis=0, ignore_index=True)
+
+
 ```
 
 ### Question 4
@@ -72,6 +79,8 @@ Answer:
 
 ```python
 
+df['cumulative_sum'] = df['A'].cumsum()
+
 ```
 
 ### Question 5
@@ -87,6 +96,8 @@ series = pd.Series(['apple', 'banana', 'cherry'])
 Answer:
 
 ```python
+
+series.str.upper()
 
 ```
 
